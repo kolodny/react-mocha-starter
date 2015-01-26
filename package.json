@@ -12,8 +12,25 @@
   "devDependencies": {
     "mocha": "^2.1.0"
   },
+  "browserify": {
+    "transform": [
+        ["reactify", {"es6": true}]
+    ]
+  },
+  "browser" : {
+    "jsdom" : false
+  },
+  "testling": {
+    "harness": "mocha",
+    "files": "test/**/*.js",
+    "browsers": [
+      "ie/8..latest",
+      "chrome/latest",
+      "firefox/latest"
+    ]
+  },
   "scripts": {
-    "test": "mocha --require test-setup.js"
+    "test": "mocha --require test-setup.js --check-leaks"
   },
   "keywords": [
     "react",
