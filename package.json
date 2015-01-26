@@ -30,7 +30,7 @@
     ]
   },
   "scripts": {
-    "test": "mocha --require test-setup.js --check-leaks"
+    "test": "mocha"
   },
   "keywords": [
     "react",
