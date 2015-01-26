@@ -1,6 +1,3 @@
-
-require('node-jsx').install();
-
 if (typeof document === 'undefined') {
   var jsdom = require("jsdom").jsdom;
   global.document = jsdom('<!doctype html><html><body></body></html>');
