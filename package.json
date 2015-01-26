@@ -1,0 +1,34 @@
+{
+  "name": "react-mocha-starter",
+  "version": "0.0.0",
+  "description": "scaffolding for a react project with mocha testing in node",
+  "main": "component.js",
+  "dependencies": {
+    "jsdom": "^3.0.2",
+    "node-jsx": "^0.12.4",
+    "react": "^0.12.2",
+    "react-tools": "^0.12.2"
+  },
+  "devDependencies": {
+    "mocha": "^2.1.0"
+  },
+  "scripts": {
+    "test": "mocha --require test-setup.js"
+  },
+  "keywords": [
+    "react",
+    "mocha",
+    "test",
+    "starter"
+  ],
+  "author": "Moshe Kolodny",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kolodny/react-mocha-starter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kolodny/react-mocha-starter/issues"
+  },
+  "homepage": "https://github.com/kolodny/react-mocha-starter"
+}
