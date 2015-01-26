@@ -1,6 +1,8 @@
 React Mocha Starter
 ===
 
+[![Build Status](https://travis-ci.org/kolodny/react-mocha-starter.svg?branch=master)](https://travis-ci.org/kolodny/react-mocha-starter)
+
 Here's a basic workflow:
 
 ```bash
