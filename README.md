@@ -1,6 +1,8 @@
 React Mocha Starter
 ===
 
+Test your react components on the client and server
+
 [![Build Status](https://travis-ci.org/kolodny/react-mocha-starter.svg?branch=master)](https://travis-ci.org/kolodny/react-mocha-starter)
 
 Here's a basic workflow:
