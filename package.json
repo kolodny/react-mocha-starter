@@ -10,10 +10,26 @@
     "react-tools": "^0.12.2"
   },
   "devDependencies": {
-    "mocha": "^2.1.0"
+    "mocha": "^2.1.0",
+    "mochify": "^2.1.1"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "reactify",
+        {
+          "es6": true
+        }
+      ]
+    ]
+  },
+  "browser": {
+    "jsdom": false
   },
   "scripts": {
-    "test": "mocha --require test-setup.js"
+    "test": "npm run test-server && npm run test-client",
+    "test-server": "mocha",
+    "test-client": "mochify --reporter=spec"
   },
   "keywords": [
     "react",
