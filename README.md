@@ -1,7 +1,7 @@
 React Mocha Starter
 ===
 
-Test your react components on the client and server
+Test your react components on the client (`phantomjs`) and server (`node|iojs`)
 
 [![Build Status](https://travis-ci.org/kolodny/react-mocha-starter.svg?branch=master)](https://travis-ci.org/kolodny/react-mocha-starter)
 
