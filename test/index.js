@@ -1,10 +1,10 @@
-require('node-jsx').install();
+require('../test-setup');
 var assert = require('assert');
 var React = require('react');
 // var ReactAddons = require('react/addons');
 // var ReactTestUtils = React.addons.TestUtils;
 
-var HelloWorld = require('./component');
+var HelloWorld = require('../component');
 
 describe('The HelloWorld component', function() {
   var component;
