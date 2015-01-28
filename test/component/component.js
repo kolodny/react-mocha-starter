@@ -1,9 +1,9 @@
-require('../test-setup');
+require('../../test-setup');
 var assert = require('assert');
 var React = require('react/addons');
 // var ReactTestUtils = React.addons.TestUtils;
 
-var HelloWorld = require('../component');
+var HelloWorld = require('../../component');
 
 describe('The HelloWorld component', function() {
   var component;
