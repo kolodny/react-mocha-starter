@@ -31,29 +31,53 @@ var React = require('react/addons');
 var HelloWorld = require('../../component');
 
 describe('The HelloWorld component', function() {
-  var component;
 
-  beforeEach(function(done) {
-    component = React.render(
-      <HelloWorld />,
-      document.body, function() {
-        setTimeout(done);
-      }
-    );
+  describe('when no props are given', function() {
+    var component;
+
+    beforeEach(function(done) {
+      component = React.render(
+        <HelloWorld />,
+        document.body, function() {
+          setTimeout(done);
+        }
+      );
+    });
+
+    afterEach(function(done) {
+      React.unmountComponentAtNode(document.body);
+      setTimeout(done);
+    });
+
+    it('should have a textContent of "Hello World!', function() {
+      assert.equal(component.getDOMNode().textContent, 'Hello World!');
+    });
+
   });
 
-  afterEach(function(done) {
-    React.unmountComponentAtNode(document.body);
-    setTimeout(done);
-  });
+  describe('when a name prop is given', function() {
+    var component;
+    var nameProp;
 
-  it('should render a HelloWorld component', function() {
-    assert.equal(component.getDOMNode().textContent, 'Hello World!');
-  });
+    beforeEach(function(done) {
+      nameProp = 'Moshe';
+      component = React.render(
+        <HelloWorld name={nameProp} />,
+        document.body, function() {
+          setTimeout(done);
+        }
+      );
+    });
 
-  it('should change when a prop changes', function() {
-    component.setProps({name: 'Moshe'});
-    assert.equal(component.getDOMNode().textContent, 'Hello Moshe!');
+    afterEach(function(done) {
+      React.unmountComponentAtNode(document.body);
+      setTimeout(done);
+    });
+
+    it('should have a textContent of "Hello ${nameProp}!', function() {
+      assert.equal(component.getDOMNode().textContent, `Hello ${nameProp}!`);
+    });
+
   });
 
 });
