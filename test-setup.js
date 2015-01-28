@@ -4,8 +4,5 @@ if (typeof document === 'undefined') {
   global.window = document.parentWindow;
   global.navigator = {userAgent: ''};
 
-  // we want to be able to include jsx files from node
-  require('node-jsx').install();
-
-  // ... add whatever browser globals your tests might need ...   
+  // ... add whatever browser globals your tests might need ...
 }

@@ -5,11 +5,11 @@
   "main": "component.js",
   "dependencies": {
     "jsdom": "^3.0.2",
-    "node-jsx": "^0.12.4",
     "react": "^0.12.2",
     "react-tools": "^0.12.2"
   },
   "devDependencies": {
+    "6to5": "^3.0.1",
     "mocha": "^2.1.0",
     "mochify": "^2.1.1",
     "reactify": "^1.0.0"
@@ -29,8 +29,8 @@
   },
   "scripts": {
     "test": "npm run test-server && npm run test-client",
-    "test-server": "mocha",
-    "test-client": "mochify --reporter=spec"
+    "test-client": "mochify ./test/**/*.js --require=6to5/register --reporter=spec",
+    "test-server": "mocha   ./test/**/*.js --require=6to5/register"
   },
   "keywords": [
     "react",

@@ -1,7 +1,6 @@
 require('../test-setup');
 var assert = require('assert');
-var React = require('react');
-// var ReactAddons = require('react/addons');
+var React = require('react/addons');
 // var ReactTestUtils = React.addons.TestUtils;
 
 var HelloWorld = require('../component');
@@ -11,7 +10,7 @@ describe('The HelloWorld component', function() {
 
   beforeEach(function(done) {
     component = React.render(
-      React.createElement(HelloWorld, {}),
+      <HelloWorld />,
       document.body, function() {
         setTimeout(done);
       }
